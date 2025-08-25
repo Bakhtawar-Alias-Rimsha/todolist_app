@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/task.dart';
 import '../providers/task_provider.dart';
+import '../screens/add_task_screen.dart';
 
 class TaskTile extends StatelessWidget {
   final Task task;
@@ -31,6 +32,15 @@ class TaskTile extends StatelessWidget {
           value: task.isDone,
           onChanged: (_) => context.read<TaskProvider>().toggleTask(task.id),
         ),
+        onTap: () {
+          // Tap to update the task
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddTaskScreen(task: task),
+            ),
+          );
+        },
       ),
     );
   }
