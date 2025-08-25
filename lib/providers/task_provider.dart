@@ -23,8 +23,10 @@ class TaskProvider with ChangeNotifier {
   }
 
   void updateTask(String id, String newTitle) {
-    final task = _tasks.firstWhere((task) => task.id == id);
-    task.title = newTitle;
-    notifyListeners();
+    final taskIndex = _tasks.indexWhere((task) => task.id == id);
+    if (taskIndex != -1) {
+      _tasks[taskIndex].title = newTitle;
+      notifyListeners();
+    }
   }
 }
