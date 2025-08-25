@@ -43,6 +43,8 @@ lib/
 
 ![img_2.png](img_2.png)
 
+![img_3.png](img_3.png)
+
 
 ✅ Home Screen with list of tasks.
 ✅ Add Task Screen with text input.
