@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/task_provider.dart';
+import '../models/task.dart';
 
 class AddTaskScreen extends StatelessWidget {
-  const AddTaskScreen({super.key});
+  final Task? task; // If null → Add, else → Update
+  const AddTaskScreen({super.key, this.task});
 
   @override
   Widget build(BuildContext context) {
-    final taskController = TextEditingController();
+    final taskController = TextEditingController(text: task?.title ?? "");
 
     return Scaffold(
-      appBar: AppBar(title: const Text("➕ Add Task")),
+      appBar: AppBar(
+        title: Text(task == null ? "➕ Add Task" : "✏️ Update Task"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -24,11 +28,17 @@ class AddTaskScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton.icon(
-              icon: const Icon(Icons.check),
-              label: const Text("Add Task"),
+              icon: Icon(task == null ? Icons.check : Icons.save),
+              label: Text(task == null ? "Add Task" : "Update Task"),
               onPressed: () {
                 if (taskController.text.isNotEmpty) {
-                  context.read<TaskProvider>().addTask(taskController.text);
+                  if (task == null) {
+                    context.read<TaskProvider>().addTask(taskController.text);
+                  } else {
+                    context
+                        .read<TaskProvider>()
+                        .updateTask(task!.id, taskController.text);
+                  }
                   Navigator.pop(context);
                 }
               },
