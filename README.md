@@ -63,9 +63,5 @@ flutter pub get
 Run the app:
 flutter run
 
-🎥 Deliverables
 
-
-👩‍💻 Author
-
-Developed with ❤️ by Bakhtawar Alias Rimsha
+👩‍💻 Author Bakhtawar Alias Rimsha
