@@ -1,5 +1,5 @@
 ## 📝 Task Manager App – Week 6 
-##  flutter project
+##   Final flutter project
 
 ## 🚀 State Management with Provider & Final Project Enhancements
 
@@ -9,31 +9,50 @@ It demonstrates state management with Provider, task handling (add, update, dele
 ## 🎯 Learning Objectives
 
 ✔️ Apply state management using Provider.
+
 ✔️ Refactor app architecture for better performance.
+
 ✔️ Implement real-time UI updates.
+
 ✔️ Add animations & clean UI styling.
 
 ## 🛠️ Features
 
 ✨ Add new tasks with a title.
+
 ✨ Mark tasks as completed / pending (with strike-through).
+
 ✨ Swipe to delete tasks (Dismissible animation).
+
 ✨ Update task titles with live state management.
+
 ✨ Clean Material UI with icons & floating action button.
+
 ✨ Optimized with Provider best practices.
 
 ## 📂 Project Structure
 lib/
+
 ┣ main.dart                # App entry point
+
 ┣ models/
+
 ┃   ┗ task.dart            # Task model
+
 ┣ providers/
+
 ┃   ┗ task_provider.dart   # State management logic
+
 ┣ screens/
+
 ┃   ┣ home_screen.dart     # Main screen
+
 ┃   ┗ add_task_screen.dart # Add task page
+
 ┣ widgets/
+
 ┃   ┣ task_list.dart       # Task list UI
+
 ┃   ┗ task_tile.dart       # Single task widget
 
 ## 📸 Screenshots 
@@ -48,7 +67,9 @@ lib/
 
 ## 🎯 veiw
 ✅ Home Screen with list of tasks.
+
 ✅ Add Task Screen with text input.
+
 ✅ Swipe-to-Delete Animation.
 
 ## 🏗️ Installation & Setup
@@ -61,9 +82,11 @@ git clone https://github.com/Bakhtawar-Alias-Rimsha/todolist_app.git
 ## 🛠Install dependencies:
 
 flutter pub get
+
 Run the app:
+
 flutter run
 
 
-👩‍💻 Author 
+##👩‍💻 Author 
 Bakhtawar Alias Rimsha Computer Science Student –  The Shaikh Ayaz University Shikarpur Intern – Flutter App Development 
