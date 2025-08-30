@@ -88,5 +88,5 @@ Run the app:
 flutter run
 
 
-##👩‍💻 Author 
+👩‍💻 Author 
 Bakhtawar Alias Rimsha Computer Science Student –  The Shaikh Ayaz University Shikarpur Intern – Flutter App Development 
